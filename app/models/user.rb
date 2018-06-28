@@ -104,6 +104,14 @@ Micropost.where("user_id IN (#{following_ids})
     following.include?(other_user)
   end
 
+  def self.search(search)
+    if search
+      where(['name LIKE ?', "%#{search}%"])
+    else
+      all
+    end
+  end
+
   private
 
     # メールアドレスをすべて小文字にする

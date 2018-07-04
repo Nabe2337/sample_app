@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20180704050410) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
-    t.datetime "accesstime",        default: '2000-01-01 00:00:00'
+    t.datetime "accesstime",        default: '1998-12-31 15:00:00'
     t.datetime "lastaccesshome",    default: '1998-12-31 15:00:00'
     t.index ["email"], name: "index_users_on_email", unique: true
   end

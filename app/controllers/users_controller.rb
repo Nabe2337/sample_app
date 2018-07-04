@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
-
+  before_action :read, only: :show
   def index
     # @users = User.paginate(page: params[:page])
     @users = User.where(activated: true).paginate(page: params[:page]).search(params[:search])
@@ -73,5 +73,11 @@ class UsersController < ApplicationController
     
     def admin_user
       redirect_to(root_url) unless current_user.admin?
+    end
+
+    def read
+      @user = current_user
+      @user.lastaccess = Time.zone.now
+      @user.save!
     end
 end

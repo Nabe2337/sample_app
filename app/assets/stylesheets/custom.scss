@@ -259,6 +259,14 @@ input {
       padding: 5px 0;
     }
   }
+  .newsign {
+    float: right;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    // background-color: rgb(63, 59, 247);
+    background: skyblue;
+  }
   .timestamp {
     color: $gray-light;
     display: block;
@@ -269,7 +277,14 @@ input {
     margin-right: 10px;
     margin-top: 5px;
   }
+  // .newsign {
+  //   border-radius: 50%;
+  //   height: 20px;
+  //   width: 20px;
+  //   background-color: #999;
+  // }
 }
+
 
 aside {
   textarea {

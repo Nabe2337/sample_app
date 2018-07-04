@@ -20,6 +20,15 @@ gem 'bootstrap-sass', '3.3.7'
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
+  # gem 'byebug', platform: :mri
+  gem 'pry-byebug'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'pry-remote'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'http-dump'
 end
 
 group :development do

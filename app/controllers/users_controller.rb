@@ -77,7 +77,7 @@ class UsersController < ApplicationController
 
     def read
       @user = current_user
-      @user.lastaccess = Time.zone.now
+      @user.lastaccesshome = Time.zone.now
       @user.save!
     end
 end

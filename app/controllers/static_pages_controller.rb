@@ -23,7 +23,7 @@ class StaticPagesController < ApplicationController
       #@user = User.find(current_user.id)
       @user = current_user
       @user.lastaccesshome = @user.accesstime
-      @user.accesstime = Time.zone.now
+      @user.accesstime = DateTime.now
       @user.save!
     end
   end
